@@ -14,3 +14,7 @@ Features
 - save latest audio output choice
 
 Made with MaxMSP 7.2.2
+
+TODO
+
+- Menu to change osc input port and automatic reconnection
