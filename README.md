@@ -11,5 +11,6 @@ Features
 - sync with Resolume at start of each loop
 - plays 3 mono sounds
 - Channel routing from Interface
+- save latest audio output choice
 
 Made with MaxMSP 7.2.2
