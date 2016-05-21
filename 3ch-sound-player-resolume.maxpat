@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 240.0, 79.0, 1015.0, 783.0 ],
+		"rect" : [ 113.0, 79.0, 1015.0, 783.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -56,7 +56,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 13.0, 487.0, 191.0, 20.0 ],
+					"patching_rect" : [ 13.0, 491.0, 191.0, 20.0 ],
 					"style" : "",
 					"text" : "Shutting down / reboot computer"
 				}
@@ -71,9 +71,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 9.0, 546.0, 281.0, 19.0 ],
+					"patching_rect" : [ 9.0, 546.0, 397.0, 19.0 ],
 					"style" : "",
-					"text" : "osascript -e 'tell application \\\"System Events\\\" to restart'"
+					"text" : "killall Arena \\; sleep 1 \\; osascript -e 'tell application \\\"System Events\\\" to restart'"
 				}
 
 			}
@@ -114,9 +114,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 9.0, 518.0, 300.0, 19.0 ],
+					"patching_rect" : [ 9.0, 518.0, 416.0, 19.0 ],
 					"style" : "",
-					"text" : "osascript -e 'tell application \\\"System Events\\\" to shut down'"
+					"text" : "killall Arena \\; sleep 1 \\; osascript -e 'tell application \\\"System Events\\\" to shut down'"
 				}
 
 			}
