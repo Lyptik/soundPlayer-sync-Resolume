@@ -38,6 +38,18 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 406.75, 466.0, 24.0, 24.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-10",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -293,8 +305,8 @@
 					"id" : "obj-97",
 					"maxclass" : "newobj",
 					"numinlets" : 5,
-					"numoutlets" : 3,
-					"outlettype" : [ "signal", "signal", "signal" ],
+					"numoutlets" : 4,
+					"outlettype" : [ "signal", "signal", "signal", "bang" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
@@ -305,7 +317,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
+						"rect" : [ 775.0, 145.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -334,6 +346,56 @@
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-13",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 225.5, 393.0, 130.0, 20.0 ],
+									"style" : "",
+									"text" : "Looping manually here"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-9",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 68.0, 218.0, 130.0, 33.0 ],
+									"style" : "",
+									"text" : "Ensure that there is no looping mode"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-7",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 50.0, 255.0, 29.5, 22.0 ],
+									"style" : "",
+									"text" : "0"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-5",
+									"maxclass" : "outlet",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 437.0, 429.5, 30.0, 30.0 ],
+									"style" : ""
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 13.0,
 									"id" : "obj-12",
@@ -359,19 +421,6 @@
 									"patching_rect" : [ 288.5, 346.5, 67.0, 23.0 ],
 									"style" : "",
 									"text" : "play~ ch2"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-4",
-									"maxclass" : "toggle",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "int" ],
-									"parameter_enable" : 0,
-									"patching_rect" : [ 50.0, 249.5, 24.0, 24.0 ],
-									"style" : ""
 								}
 
 							}
@@ -571,6 +620,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-5", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-34", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-94", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -583,14 +641,13 @@
 									"destination" : [ "obj-1", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 59.5, 274.5, 59.5, 274.5 ],
-									"source" : [ "obj-4", 0 ]
+									"source" : [ "obj-7", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-4", 0 ],
+									"destination" : [ "obj-7", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-89", 0 ]
@@ -859,7 +916,7 @@
 										"count" : 1,
 										"data" : [ 											{
 												"key" : 1,
-												"value" : [ 0 ]
+												"value" : [ 1 ]
 											}
  ]
 									}
@@ -1669,7 +1726,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-22",
-					"items" : "Built-in Output",
+					"items" : [ "AirPlay", ",", "Built-in Output" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -1928,16 +1985,16 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-21",
-					"linecount" : 13,
+					"linecount" : 15,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 22.5, 12.0, 375.0, 181.0 ],
+					"patching_rect" : [ 22.5, 12.0, 396.0, 208.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 13,
-					"presentation_rect" : [ 171.5, 26.5, 347.0, 181.0 ],
+					"presentation_linecount" : 17,
+					"presentation_rect" : [ 171.5, 26.5, 347.0, 234.0 ],
 					"style" : "",
-					"text" : "3 channel sound player synchronized with Resolume\n\nThis patch loads ch1.wav ch2.wav ch3.wav\nThen play them automatically in loop mode in the 3 first channels synchronized with the layer1/clip1 from Resolume\n\nListens to osc /start /stop /pause /resume / volume on default 12000 port\nSynchronize with Resolume layer1/clip1 on default 7000 port\n\nTo change volume by osc : /volume $ [0;1]\n\n/shutdown /reboot work only on OSX"
+					"text" : "MultiChannel sound player synchronized with Resolume\n\nThis patch loads ch1.wav ch2.wav and ch3.wav\nThen play them automatically in loop mode in the 3 first channels synchronized with the layer1/clip1 from Resolume\n\nListens to osc /start /stop /pause /resume / volume on default 12000 port\nSynchronize with Resolume layer1/clip1 on default 7000 port\n\nTo change volume by osc : /volume $ [0;1]\n\nNote :\n- QuickOsc configuration /volume $ (Don't forget the $ !)\n- /shutdown /reboot work only on OSX\n- Works best if you remove the popup on exit in Resolume Preferences"
 				}
 
 			}
@@ -2577,10 +2634,19 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-15", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-97", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-36", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 386.25, 461.0, 465.625, 461.0, 465.625, 372.0, 545.0, 372.0 ],
+					"midpoints" : [ 376.25, 461.0, 465.625, 461.0, 465.625, 372.0, 545.0, 372.0 ],
 					"source" : [ "obj-97", 1 ]
 				}
 
@@ -2600,16 +2666,25 @@
 					"destination" : [ "obj-37", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 416.25, 461.0, 475.875, 461.0, 475.875, 372.0, 535.5, 372.0 ],
+					"midpoints" : [ 396.25, 461.0, 475.875, 461.0, 475.875, 372.0, 535.5, 372.0 ],
 					"source" : [ "obj-97", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-97", 3 ]
 				}
 
 			}
  ],
 		"parameters" : 		{
 			"obj-38" : [ "Stereo[2]", "Stereo", 0 ],
-			"obj-37" : [ "Stereo[1]", "Stereo", 0 ],
-			"obj-36" : [ "Stereo", "Stereo", 0 ]
+			"obj-36" : [ "Stereo", "Stereo", 0 ],
+			"obj-37" : [ "Stereo[1]", "Stereo", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
