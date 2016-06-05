@@ -6,7 +6,7 @@ Features
 
 - remote OSC control
 - GUI interface control
-- can shutdown reboot your OSX computer
+- can shutdown reboot your OSX computer (through osc2shutdown https://bitbucket.org/lyptik/osc2shutdown)
 - auto Start and loop sound forever
 - sync with Resolume at start of each loop
 - plays 3 mono sounds
